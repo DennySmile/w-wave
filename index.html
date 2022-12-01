@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>W-wave</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo">
+        <img src="img/logo.png" alt="Logo" class="logo">
+      </a>
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#podcasts" class="nav__link">Подкасты</a></li>
+          <li class="nav__item"><a href="#progs" class="nav__link">Передачи</a></li>
+          <li class="nav__item"><a href="#guests" class="nav__link">Гости</a></li>
+          <li class="nav__item"><a href="#playlists" class="nav__link">Плейлисты</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">О&nbsp;нас</a></li>
+        </ul>
+      </nav>
+      <div class="search">
+        <form method="get" class="search__form">
+          <button type="button" class="search__btn"></button>
+          <input type="search" name="search" id="search" class="search__input" placeholder="Поиск по сайту">
+          <button type="button" class="search__close-btn btn-reset"></button>
+        </form>
+      </div>
+      <a href="#" class="header__login header__login--mobile btn hover">Войти</a>
+    </div>
+
+  </header>
 </body>
+
 </html>
