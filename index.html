@@ -12,28 +12,102 @@
 
 <body>
   <header class="header">
-    <div class="container header__container">
-      <a href="index.html" class="header__logo">
-        <img src="img/logo.png" alt="Logo" class="logo">
-      </a>
-      <nav class="header__nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#podcasts" class="nav__link">Подкасты</a></li>
-          <li class="nav__item"><a href="#progs" class="nav__link">Передачи</a></li>
-          <li class="nav__item"><a href="#guests" class="nav__link">Гости</a></li>
-          <li class="nav__item"><a href="#playlists" class="nav__link">Плейлисты</a></li>
-          <li class="nav__item"><a href="#about" class="nav__link">О&nbsp;нас</a></li>
-        </ul>
-      </nav>
-      <div class="search">
-        <form method="get" class="search__form">
-          <button type="button" class="search__btn"></button>
-          <input type="search" name="search" id="search" class="search__input" placeholder="Поиск по сайту">
-          <button type="button" class="search__close-btn btn-reset"></button>
-        </form>
+    <div class="header__top">
+      <div class="container header__container">
+        <div class="header__left">
+          <a href="index.html" class="header__logo">
+            <img src="img/logo.png" alt="Logo" class="logo">
+          </a>
+        </div>
+        <div class="header__right">
+          <button id="burger" aria-label="Открыть панель навигации" class="btn-reset right-block__burger burger">
+            <span class="burger__line burger__line_first"></span>
+            <span class="burger__line burger__line_second"></span>
+            <span class="burger__line burger__line_third"></span>
+            <span class="burger__line burger__line_fourth"></span>
+          </button>
+          <nav class="header-nav">
+            <ul class="header-nav__list">
+              <li class="header-nav__item"><a href="#podcasts" class="header-nav__link">Подкасты</a></li>
+              <li class="header-nav__item"><a href="#progs" class="header-nav__link">Передачи</a></li>
+              <li class="header-nav__item"><a href="#guests" class="header-nav__link">Гости</a></li>
+              <li class="header-nav__item"><a href="#playlists" class="header-nav__link">Плейлисты</a></li>
+              <li class="header-nav__item"><a href="#about" class="header-nav__link">О&nbsp;нас</a></li>
+            </ul>
+          </nav>
+          <form class="header__form-search form-search">
+            <input class="form-search__input-search" type="text" placeholder="Поиск по сайту">
+            <button type="submit" class="btn-reset form-search__btn-search" aria-label="Поиск по сайту">
+              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+                  stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </form>
+          <button class="btn-reset header__btn-log-in" data-graph-path="first" aria-label="Вход в личный кабинет">
+            <!-- <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5 1.5L2 5.25L9.5 9L17 5.25L9.5 1.5Z" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2 12.75L9.5 16.5L17 12.75" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M2 9L9.5 12.75L17 9" stroke="#121723" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg> -->
+            Вход
+          </button>
+        </div>
       </div>
-      <a href="#" class="header__login header__login--mobile btn hover">Войти</a>
+      <div class="header__bottom">
+        <div class="container header-bottom__container">
+          <div class="header-bottom__nav bottom-nav">
+            <ul class="bottom-nav__list">
+              <li class="bottom-nav__item"><a href="" class="bottom-nav__link">Новости</a></li>
+              <li class="bottom-nav__item"><a href="" class="bottom-nav__link">Блоги</a></li>
+              <li class="bottom-nav__item"><a href="" class="bottom-nav__link">Топы</a></li>
+              <li class="bottom-nav__item"><a href="" class="bottom-nav__link">Опросы</a></li>
+              <li class="bottom-nav__item"><a href="" class="bottom-nav__link">Рейтинги</a></li>
+              <li class="bottom-nav__item"><a href="" class="bottom-nav__link">Реклама</a></li>
+            </ul>
+          </div>
+          <div class="flex header-bottom__btns bottom-btns">
+            <button class="btn-reset bottom-btns__btn-players bottom-btns__btn-players-archive"
+              aria-label="Запустить архив">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+                  fill="#A1A6B4"></path>
+              </svg>
+              <svg class="passive" width="20" height="20" viewbox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"
+                  fill="#A1A6B4"></path>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"></rect>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"></rect>
+              </svg>
+            </button>
+            <button class="btn-reset bottom-btns__btn-players bottom-btns__btn-players-ether"
+              aria-label="Запустить эфир">
+              <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10 0C4.475 0 0 4.475 0 10C0 15.525 4.475 20 10 20C15.525 20 20 15.525 20 10C20 4.475 15.525 0 10 0ZM8 14.5V5.5L14 10L8 14.5Z"
+                  fill="#A1A6B4"></path>
+              </svg>
+              <svg class="passive" width="20" height="20" viewbox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z"
+                  fill="#A1A6B4"></path>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"></rect>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"></rect>
+              </svg>
+            </button>
+            <img src="img/years.png" alt="Возрастные ограничения" class="header__img">
+          </div>
+        </div>
+      </div>
     </div>
+
 
   </header>
 </body>
